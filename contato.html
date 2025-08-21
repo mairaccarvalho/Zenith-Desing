@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Cor da do barra navegador (android) -->
+        <meta name="theme-color" content="#341d08">
+        <meta name="msapplication-TileColor" content="#341d08">
+        <meta name="msapplication-navbutton-color" content="#341d08">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#341d08">
+        <!-- Título da página -->
+        <title>Zenith Design - Projetos</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- CSS Externo -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        
+        <!--Font Awesome CDN - Icones -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- API Scroll reveal - Animação no scroll -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+       <script>
+    ScrollReveal({ reset: false });
+</script>
+    </head>
+
+    <body>
+        <!-- Menu de navegação -->
+        <nav class="navbar">
+            <!-- Logo da empresa -->
+            <a href="#home">
+                <img src="zenithlogo.png" alt="Logo" class="logo" />
+            </a>
+
+            <!-- Lista de navegação -->
+            <ul class="navlist">
+                <li>
+                    <a href="index.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="index.html#projects">Projetos</a>
+                </li>
+                <!-- <li>
+                    <a href="#testimony">Depoimentos</a>
+                </li> -->
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+                <!-- <li>
+                    <a href="servicos.html">Serviços</a>
+                </li> -->
+            </ul>
+
+            <!-- Ícones do menu hamburguer -->
+            <div class="menu-icon">
+                <!-- ícone hamburguer -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    class="icon-ham"
+                >
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    />
+                </svg>
+
+                <!-- ícone fechar -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 384 512"
+                    class="icon-close"
+                >
+                    <path
+                        d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+                    />
+                </svg>
+            </div>
+        </nav>
+
+        <main>
+             <!-- Vetores -->
+    <img src="img/vetor1.png" alt="Vetor Folha" class="vetor1">
+    <img src="img/vetor2.png" alt="Vetor Folha" class="vetor2">
+
+    
+
+             <!-- Vetores -->
+             <img src="img/vetor1.png" alt="Vetor Folha" class="vetor1">
+             <img src="img/vetor2.png" alt="Vetor Folha" class="vetor2">
+             <main>
+                <section id="contact-form">
+                    <h2>Entre em Contato</h2>
+                    <p>Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</p>
+            
+                    <form action="enviar_contato.php" method="POST">
+                        <!-- Nome -->
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome completo" />
+                        </div>
+                        
+                        <!-- E-mail -->
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="Seu e-mail" />
+                        </div>
+            
+                        <!-- Telefone -->
+                        <div class="form-group">
+                            <label for="phone">Telefone:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Seu telefone" />
+                        </div>
+            
+                        <!-- Assunto -->
+                        <div class="form-group">
+                            <label for="subject">Assunto:</label>
+                            <select id="subject" name="subject">
+                                <option value="geral">Geral</option>
+                                <option value="suporte">Suporte</option>
+                                <option value="orçamento">Orçamento</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+            
+                        <!-- Mensagem -->
+                        <div class="form-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" required placeholder="Sua mensagem" rows="5"></textarea>
+                        </div>
+            
+                        <!-- Termos de uso -->
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="terms" name="terms" required /> Aceito os <a href="#">termos de uso</a>.
+                            </label>
+                        </div>
+            
+                        <!-- Enviar -->
+                        <div class="form-group">
+                            <button type="submit" class="submit-button">Enviar</button>
+                        </div>
+            
+                        <!-- Mensagem de Confirmação -->
+                        <div id="confirmation-message" style="display: none;">
+                            <p class="success-message">Sua mensagem foi enviada com sucesso! Em breve entraremos em contato.</p>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            
+
+         <!-- Rodapé -->
+         <footer>
+            <img src="img/vetor1.png" alt="Vetor Folha" class="vetor1">
+                    <img src="img/vetor2.png" alt="Vetor Folha" class="vetor2">
+            <!-- Conteúdo do rodapé -->
+            <div id="footer-content">
+                <!-- Logo e links redes sociais -->
+                <div class="footer-logo">
+                    <h2>Zenith Design</h2>
+                    <h3>Design sustentável que ecoa beleza</h3>
+
+                    <p>Estamos também por aqui:</p>
+                    <div class="footer-social-media">
+                        <a
+                            href="https://instagram.com/ecodesign_eco?igshid=MzNlNGNkZWQ4Mg=="
+                            class="footer-link"
+                            target="_blank"
+                        >
+                            <i class="fa-brands fa-instagram fa-2xl"></i>
+                        </a>
+                        <a href="https://wa.link/ozma9r" 
+                        class="footer-link" target="_blank">
+                            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Informações de contato -->
+                <div id="footer-contacts">
+                    <h3>Nossos contatos</h3>
+                    <p>
+                        <span><i class="fa-solid fa-location-dot fa-lg"></i></span>
+                        Av. Bem-te-vi, 77 - Indianópolis, São Paulo - SP
+                    </p>
+                    <p>
+                        <span><i class="fa-solid fa-phone fa-lg"></i></span>
+                        +55 (11) 2243-5067
+                    </p>
+                    <p>
+                        <span><i class="fa-solid fa-envelope fa-lg"></i></span>
+                        zenithdesign@contato.com
+                    </p>
+                </div>
+
+                <!-- Horário de funcionamento -->
+                <div class="footer-work-time">
+                    <h3>Horário de funcionamento</h3>
+                    <p>Segunda a Sexta - 8h00 às 18h00</p>
+                    <p>Sabádo - 8h00 às 16h00</p>
+                </div>
+            </div>
+
+            <!-- Copyright da empresa -->
+            <div id="footer-copyright">
+                
+                    <p>Copyright &copy; 2025 Zenith Design</p>
+               
+            </div>
+        </footer>
+
+        <!-- Botão para voltar ao início -->
+        <button class="button-top">
+            <span class="arrow"></span>
+        </button>
+        <!-- Link JavaScript externo -->
+        <script src="js/main.js"></script>  
+    </body>
+</html>
