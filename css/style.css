@@ -1,3 +1,7 @@
+/* ==============================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ============================================== */
+
 /* Reset dos estilos padrão */
 * {
     margin: 0;
@@ -9,7 +13,7 @@
     scroll-behavior: smooth;
 }
 
-/* Variáveis */
+/* Variáveis de cores e tamanhos */
 :root {
     --bg-color: #ffffff;
     --second-bg-color: #000;
@@ -24,7 +28,7 @@
     --p-line-height: 1.4rem;
 }
 
-/* Estilo do scrollbar */
+/* Estilização da barra de rolagem */
 ::-webkit-scrollbar-track {
     background-color: #000;
     width: 6px;
@@ -41,16 +45,17 @@
     width: 6px;
     height: 6px;
 }
-/* Estilo padrão body */
+
+/* Estilo base do body */
 body {
     background-color: #d3c5b991;
     color: var(--text-color);
     overflow-x: hidden;
 }
 
-/* Estilo padrão botão */
+/* Estilo padrão para botões */
 .btn {
-    padding: 1rem 4rem 1rem 4rem;
+    padding: 1rem 4rem;
     border-radius: 5px;
     border: none;
     margin-top: 1.25rem;
@@ -65,17 +70,19 @@ body {
     opacity: 0.8;
 }
 
-/* Cor menu hamburguer */
+/* Cor do ícone do menu hamburguer */
 .menu-icon svg {
-    fill:#faf9f6
+    fill: #faf9f6;
 }
 
-/* Espaçamento nas seções */
+/* Espaçamento padrão para seções */
 section {
     padding: 10rem 15% 7.5rem;
 }
 
-/*============INICIO-NAVBAR============*/
+/* ==============================================
+   NAVBAR/HEADER
+   ============================================== */
 .header {
     width: 100%;
     position: fixed;
@@ -85,7 +92,7 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
-/*----Menu navegação---- */
+/* Menu de navegação principal */
 .navbar {
     position: fixed;
     top: 0;
@@ -101,6 +108,7 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Navbar quando fixada no topo (sticky) */
 .navbar.sticky {
     background-color: #a374485d;
     -webkit-backdrop-filter: blur(20px);
@@ -109,11 +117,13 @@ section {
     padding: 0.75rem 15%;
 }
 
+/* Estilo do logo */
 .logo {
     width: 230px;
     border-radius: 5px;
 }
 
+/* Lista de navegação */
 .navlist {
     display: flex;
     gap: 3.16rem;
@@ -124,7 +134,6 @@ section {
     text-transform: uppercase;
     font-size: var(--p-font-size);
     font-weight: 500;
-    /* margin: 0 1.58rem; */
     transition: all 250ms ease;
     position: relative;
 }
@@ -133,6 +142,7 @@ section {
     opacity: 0.8;
 }
 
+/* Efeito de sublinhado nos links de navegação */
 .navlist a::after {
     content: "";
     position: absolute;
@@ -146,10 +156,9 @@ section {
 
 .navlist a:hover::after {
     width: 100%;
-
 }
 
-/*------Menu hamburguer-------*/
+/* Menu hamburguer (visível apenas em mobile) */
 .menu-icon {
     font-size: 2.19rem;
     color: var(--text-color);
@@ -162,10 +171,12 @@ section {
 .menu-icon .icon-close {
     display: none;
 }
-/*============FIM-NAVBAR============*/
 
-/*============INICIO-MAIN============*/
-/*---------- Seção Home-Inicio ----------*/
+/* ==============================================
+   SEÇÃO PRINCIPAL (MAIN)
+   ============================================== */
+
+/* ---------- Seção Home/Início ---------- */
 #home {
     width: 100%;
     height: 100vh;
@@ -178,8 +189,9 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
-
 }
+
+/* Animação de slideshow para o background */
 #home::before {
     content: '';
     position: absolute;
@@ -189,8 +201,9 @@ section {
     height: 100%;
     background-size: cover;
     background-position: center;
-    animation: slideShow 15s infinite; /* Animação para trocar as imagens */
+    animation: slideShow 15s infinite;
 }
+
 @keyframes slideShow {
     0% {
         background-image: url('../img/galeria1.webp');
@@ -205,6 +218,8 @@ section {
         background-image: url('../img/galeria1.webp');
     }
 }
+
+/* Conteúdo textual da home */
 .home-text {
     z-index: 2;
     height: auto;
@@ -214,13 +229,14 @@ section {
     font-size: var(--h1-font-size);
     font-weight: 700;
     line-height: 1.1em;
-    color: white
+    color: white;
 }
 
 .home-text h1 span {
     color: var(--logo-color);
 }
 
+/* Texto informativo adicional */
 .info-text {
     display: flex;
     align-items: flex-start;
@@ -247,8 +263,9 @@ section {
     color: white;
 }
 
+/* Botão da home */
 .btn-home {
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 36px;
     border: 1px solid var(--text-color);
     color: white;
@@ -262,6 +279,7 @@ section {
     transform: scale(1.05);
 }
 
+/* Overlay escuro sobre a imagem de fundo */
 #home::after {
     content: '';
     width: 100%;
@@ -272,10 +290,8 @@ section {
     top: 0;
     color: #bdb766;
 }
-/*---------- Seção Home-Fim ----------*/
 
-
-/*---------- Seção About-Inicio ----------*/
+/* ---------- Seção Sobre (About) ---------- */
 #about {
     height: auto;
     width: 100%;
@@ -294,13 +310,6 @@ section {
     z-index: 1;
 }
 
-/* .about-text p {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-} */
-
 .about-img {
     width: 32.68rem;
     height: 25.32rem;
@@ -308,12 +317,14 @@ section {
     z-index: 1;
 }
 
-.about-img img{
+.about-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
+
+/* Imagem de projetos (reutilizável) */
 .projet-img {
     width: 300px;
     height: 300px;
@@ -321,12 +332,14 @@ section {
     z-index: 1;
 }
 
-.projet-img img{
+.projet-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
+
+/* Container de conteúdo genérico */
 .content {
     width: 100%;
     height: auto;
@@ -347,10 +360,9 @@ section {
     line-height: 1em;
 }
 
-
-/* Botão "saiba mais" */
+/* Botão "Saiba mais" */
 #button-read-more {
-    padding: 1rem 2rem; /* Ajuste o padding se necessário */
+    padding: 1rem 2rem;
     border-radius: 5px;
     border: none;
     font-weight: bold;
@@ -362,16 +374,16 @@ section {
     display: block;
     margin-top: 7%;
     color: var(--second-text-color);
-    text-align: center; /* Alinha o texto horizontalmente */
-    line-height: 2.5rem; /* Ajuste conforme necessário para centralizar verticalmente */
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center;
+    line-height: 2.5rem;
+    text-decoration: none;
 }
-
 
 #button-read-more:hover {
-    opacity: 0.8    ;
+    opacity: 0.8;
 }
 
+/* Elementos decorativos vetoriais */
 .vetor1 {
     position: absolute;
     width: 16rem;
@@ -383,12 +395,9 @@ section {
     width: 16rem;
     right: 0px;
     bottom: 80px;
-    /* transform: rotate(50deg); */
 }
-/*---------- Seção About-Fim ----------*/
 
-
-/*---------- Seção Projetos-Inicio ----------*/
+/* ---------- Seção Projetos ---------- */
 #projects {
     height: auto;
     width: 100%;
@@ -401,32 +410,6 @@ section {
     position: relative;
     scroll-margin-top: 100px;
 }
-
-/* #projects::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background-color:#d8af8c91;
-    transform: skew(3deg, -1deg);
-    transform-origin: left;
-    width: 100%;
-    height: 180px;
-} */
-
-/* #projects::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    background-color: #bdb76b;
-    transform: skew(0deg, -2deg);
-    transform-origin: right;
-    width: 100%;
-    height: 100px;
-}*/
 
 .projects-title {
     padding-top: 35px;
@@ -443,6 +426,7 @@ section {
     font-size: var(--p-font-size);
 }
 
+/* Grid de projetos */
 .projects-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(410px, auto));
@@ -451,6 +435,7 @@ section {
     margin-top: 5rem;
 }
 
+/* Item individual de projeto */
 .row {
     position: relative;
     border-radius: 8px;
@@ -467,7 +452,7 @@ section {
     transition: transform 0.5s;
 }
 
-.row:hover img{
+.row:hover img {
     transform: scale(1.05);
 }
 
@@ -475,9 +460,8 @@ section {
     text-align: center;
     margin-top: 1rem;
 }
-/*---------- Seção Projetos-Fim ----------*/
 
-/*---------- Seção Testimony-Inicio ----------*/
+/* ---------- Seção Depoimentos (Testimony) ---------- */
 #testimony {
     height: auto;
     width: 100%;
@@ -495,10 +479,10 @@ section {
 }
 
 .testimony-title p {
-    font-size: var(--p-font-size)
+    font-size: var(--p-font-size);
 }
 
-
+/* Container de depoimentos */
 .testimony-box-container {
     display: flex;
     justify-content: center;
@@ -518,6 +502,7 @@ section {
     border-radius: 8px;
 }
 
+/* Avatar do usuário */
 .profile-img {
     width: 3.13rem;
     height: 3.13rem;
@@ -525,13 +510,6 @@ section {
     overflow: hidden;
     margin-right: 0.7rem;
 }
-
-/* .profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-} */
 
 .profile {
     display: flex;
@@ -549,7 +527,7 @@ section {
     letter-spacing: 0.5px;
 }
 
-.name-user span{
+.name-user span {
     color: #979797;
     font-size: 0.8rem;
 }
@@ -569,25 +547,20 @@ section {
     font-size: 1rem;
     color: #4b4b4b;
 }
-/*---------- Seção Testimony-Fim ----------*/
 
-/*---------- Seção Contacts-Inicio ----------*/
-
-
+/* ---------- Seção Contatos ---------- */
 .contato-section {
-    background-color:#f1e3d691;
+    background-color: #f1e3d691;
     padding: 120px 40px;
     color: #000000;
     text-align: center;
 }
 
-/* Container do conteúdo */
 .contato-container {
     max-width: 850px;
     margin: 0 auto;
 }
 
-/* Subtítulo */
 .contato-subtitulo {
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -595,7 +568,6 @@ section {
     color: #ccc;
 }
 
-/* Título principal */
 .contato-titulo {
     font-size: 48px;
     font-weight: 700;
@@ -603,20 +575,17 @@ section {
     margin: 20px 0;
 }
 
-/* Informações de contato */
 .contato-telefone,
 .contato-email {
     font-size: 18px;
     margin: 10px 0;
 }
 
-/* Link de email */
 .email-link {
     color: #fff;
     text-decoration: underline;
 }
 
-/* Container do formulário */
 .form-container {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 40px;
@@ -624,14 +593,12 @@ section {
     margin-top: 40px;
 }
 
-/* Título do formulário */
 .form-container h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: contato-section;
 }
 
-/* Formulário */
 .formulario-contato {
     display: flex;
     flex-direction: column;
@@ -639,7 +606,6 @@ section {
     align-items: center;
 }
 
-/* Labels */
 .formulario-contato label {
     width: 100%;
     max-width: 400px;
@@ -647,7 +613,6 @@ section {
     font-size: 16px;
 }
 
-/* Campos de input */
 .formulario-contato input[type="text"],
 .formulario-contato input[type="email"],
 .formulario-contato input[type="tel"] {
@@ -658,7 +623,6 @@ section {
     margin-top: 5px;
 }
 
-/* Botão de submit */
 .formulario-contato input[type="submit"] {
     margin-top: 20px;
     padding: 12px 30px;
@@ -668,10 +632,9 @@ section {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    transition:  0.3s;
+    transition: 0.3s;
 }
 
-/* Efeito hover do botão */
 .formulario-contato input[type="submit"]:hover {
     background-color: #e9e9e9;
 }
@@ -687,111 +650,6 @@ section {
     resize: vertical;
 }
 
-
-
-
-/* #contacts {
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    padding-top: 5rem;
-    scroll-margin-top: 100px;
-}
-
-.form-container {
-    width: 150%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #e9e9e9;
-    margin-right: 5%;
-   
-}
-
-.form-box {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-box h2 {
-    margin-bottom: 1rem;
-}
-
-.form {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.form p {
-    margin-bottom: 0.5rem;
-}
-
-.input-box {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#input-name {
-    width: 100%;
-}
-
-#input-mail,
-#input-tel {
-    width: 45%;
-}
-
-#input-name,
-#input-tel,
-#input-mail,
-#input-submit {
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-    border: none;
-}
-
-#input-name,
-#input-tel,
-#input-mail:focus {
-    outline: none;
-}
-
-#textarea {
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    padding: 1rem;
-    resize: none;
-}
-
-.map-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map-container iframe {
-    border: none;
-    border-radius: 15px;
-    margin-top: 30%;
-    margin-left: 30%;
-    width: 250%;
-    height: 80%;
-} */
-/*---------- Seção Contacts-Fim ----------*/
-/* Seção contato pagina separada */
-/* Estilizando o formulário */
-/* Estilizando o formulário */
 #contact-form {
     max-width: 700px;
     margin: 5%;
@@ -860,7 +718,6 @@ section {
     background-color: #4a2a14;
 }
 
-/* Estilos para a mensagem de sucesso */
 .success-message {
     font-size: 1.2em;
     color: green;
@@ -868,12 +725,10 @@ section {
     margin-top: 20px;
 }
 
-/* Estilos para o campo de aceitação dos termos */
 .form-group input[type="checkbox"] {
     margin-right: 10px;
 }
 
-/* Estilos adicionais para tornar o formulário mais bonito */
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
@@ -884,8 +739,9 @@ section {
     width: auto;
     margin-top: 5px;
 }
+
+/* Seção de projetos alternativa */
 #projects1 {
-    /* margin-top: 5%; */
     padding: 50px 0;
     background-color: #c7a485a6;
     text-align: center;
@@ -908,7 +764,6 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    
 }
 
 .projects1-card {
@@ -959,10 +814,9 @@ section {
     border-color: #4e2a17;
 }
 
-/* Fim pagina contato */
-/*============FIM-MAIN============*/
-
-/*============FOOTER-INÍCIO============*/
+/* ==============================================
+   FOOTER
+   ============================================== */
 footer {
     height: auto;
     width: 100%;
@@ -970,7 +824,6 @@ footer {
     position: relative;
 }
 
-/* Container do footer */
 #footer-content {
     width: 100%;
     height: 100%;
@@ -990,11 +843,11 @@ footer {
     line-height: var(--p-line-height);
 }
 
-#footer-contacts p span{
+#footer-contacts p span {
     margin-right: 5px;
 }
 
-#footer-contacts p .fa-location-dot{
+#footer-contacts p .fa-location-dot {
     margin-right: 8px;
 }
 
@@ -1029,14 +882,13 @@ footer {
     color: var(--logo-color);
 }
 
-.footer-work-time h3{
+.footer-work-time h3 {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
 
 .footer-work-time p {
     line-height: var(--p-line-height);
-
 }
 
 #footer-copyright {
@@ -1055,6 +907,7 @@ footer {
     transition: 0.3s;
 }
 
+/* Elemento decorativo no topo do footer */
 footer::before {
     content: "";
     position: absolute;
@@ -1067,10 +920,12 @@ footer::before {
     width: 100%;
     height: 80px;
 }
-/*============FOOTER-FIM============*/
 
+/* ==============================================
+   COMPONENTES ADICIONAIS
+   ============================================== */
 
-/*------ Botão para voltar ao topo ------*/
+/* Botão para voltar ao topo */
 .button-top {
     visibility: hidden;
     background-color: transparent;
@@ -1107,7 +962,7 @@ footer::before {
     opacity: 0.7;
 }
 
-/* Seção Serviços */
+/* ---------- Seção Serviços ---------- */
 #servico {
     height: auto;
     width: 100%;
@@ -1127,7 +982,6 @@ footer::before {
     top: 0;
     left: 0;
     display: block;
-    /* background-color:#d3c5b991; */
     transform: skew(3deg, -1deg);
     transform-origin: left;
     width: 100%;
@@ -1137,23 +991,22 @@ footer::before {
 .servicos {
     text-align: center;
     padding: 100px;
-    
-    margin-top: 30px; /* Adiciona espaço no topo */
+    margin-top: 30px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens "quebrem" para a linha seguinte */
-    justify-content: space-between; /* Espaça uniformemente os itens */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .servico-card {
-    width: 48%; /* Define 2 itens por linha, com algum espaçamento */
+    width: 48%;
     padding: 20px;
-   background-color: #d3c5b991;
+    background-color: #d3c5b991;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-top: 5%;
-    margin-bottom: 30px; /* Adiciona espaçamento na parte inferior */
+    margin-bottom: 30px;
     transition: transform 0.3s;
 }
 
@@ -1167,17 +1020,20 @@ footer::before {
     margin-top: 5%;
     margin-bottom: 5px;
 }
-.servicos h1{
+
+.servicos h1 {
     justify-content: center;
     text-align: center;
     font-size: 50px;
     padding-left: 18%;
 }
-.servicos p{
+
+.servicos p {
     justify-content: center;
     text-align: justify;
     font-size: 1rem;
 }
+
 .servico-card h2 {
     font-size: 1.5rem;
     color: #333;
@@ -1189,90 +1045,82 @@ footer::before {
     color: #666;
 }
 
-
-
-
-
-
-
-/* Modal base */
+/* ---------- Modal (Janelas Pop-up) ---------- */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: relative;
-  text-align: center;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
 }
 
 .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  color: #333;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-  color: #4caf50;
+    color: #4caf50;
 }
 
-/* Imagem no modal */
 #modal-image {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 20px 0;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-/* Modal texto */
 #modal-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 #modal-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
 }
 
 .card-image {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
-/* Fim seção serviço */
 
+/* ==============================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ============================================== */
 
-
-/*========== MEDIA QUERIES - BREAKPOINTS ============*/
-/* Dispositivos grandes */
+/* Dispositivos grandes (1730px) */
 @media screen and (max-width: 1730px) {
     .about-img {
         width: 32.68rem;
@@ -1290,6 +1138,7 @@ footer::before {
     }
 }
 
+/* Dispositivos grandes (1480px) */
 @media screen and (max-width: 1480px) {
     .about-img {
         width: 90%;
@@ -1336,11 +1185,10 @@ footer::before {
         bottom: 2rem;
         right: 2rem;
     }
-
 }
 
-
-@media screen and (max-width:1024px) {
+/* Tablets (1024px) */
+@media screen and (max-width: 1024px) {
     section {
         padding: 10rem 10% 7.5rem;
     }
@@ -1381,9 +1229,8 @@ footer::before {
     }
 }
 
-
-/* Dispositivos médios */
-@media screen and (max-width:900px) {
+/* Tablets (900px) */
+@media screen and (max-width: 900px) {
     #about {
         display: flex;
     }
@@ -1461,7 +1308,6 @@ footer::before {
         margin: 17px;
         font-size: 20px;
         transition: all .45s ease;
-
     }
 
     .navlist a:hover {
@@ -1512,7 +1358,8 @@ footer::before {
     }
 }
 
-@media screen and (max-width:700px) {
+/* Tablets pequenos (700px) */
+@media screen and (max-width: 700px) {
     section {
         padding: 10rem 8% 7.5rem;
     }
@@ -1532,8 +1379,8 @@ footer::before {
 
     #input-mail,
     #input-tel {
-    width: 100%;
-}
+        width: 100%;
+    }
 
     .input-box {
         flex-wrap: wrap;
@@ -1566,12 +1413,10 @@ footer::before {
     .footer-work-time p {
         text-align: start;
     }
-
-
 }
 
-/* Dispositivos pequenos */
-@media screen and (max-width:536px) {
+/* Celulares (536px) */
+@media screen and (max-width: 536px) {
     .navbar {
         padding: 1.38rem 4%;
     }
@@ -1610,7 +1455,6 @@ footer::before {
         margin: 0.9rem 0;
     }
 
-
     #footer-content {
         flex-wrap: wrap;
     }
@@ -1634,8 +1478,8 @@ footer::before {
     }
 }
 
-
-@media screen and (max-width:445px) {
+/* Celulares pequenos (445px) */
+@media screen and (max-width: 445px) {
     .box-top {
         display: block;
         margin-bottom: 0.5rem;
@@ -1648,4 +1492,83 @@ footer::before {
     #footer-content {
         padding: 3rem 2rem;
     }
+}
+
+
+
+
+/* === PATCH DE RESPONSIVIDADE & CORREÇÕES (ADICIONE AO FINAL DO ARQUIVO) === */
+
+/* Evita overlays bloquearem cliques e garante empilhamento correto no hero */
+#home::before,
+#home::after { pointer-events: none; z-index: 1; }
+.home-text, .info-text { position: relative; z-index: 2; }
+
+/* Mídias fluidas */
+img, video { max-width: 100%; height: auto; display: block; }
+
+/* MENU MOBILE – unificação (.open OU .active) */
+@media screen and (max-width: 900px) {
+  .navbar { position: fixed; }
+  .navbar .navlist{
+    position: fixed;
+    inset: 0; /* ocupa a tela toda */
+    background: rgba(52,29,8,0.95);
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px; /* espaço da navbar */
+    gap: 2rem;
+    z-index: 999;
+  }
+  .navbar .navlist.open,
+  .navbar .navlist.active{ transform: translateX(0); }
+
+  .menu-icon { display: block; }
+  .navbar.sticky { padding: .75rem 4%; }
+  .logo { width: 200px; }
+}
+
+/* Grid de projetos mais flexível em tablets */
+@media screen and (max-width: 1024px){
+  .projects-content{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Ajustes gerais até 768px (reforços) */
+@media screen and (max-width: 768px){
+  .servicos{ padding: 40px 20px; }
+  .servicos h1{ padding-left: 0; text-align: center; font-size: 2rem; }
+  .servico-card{ width: 100%; }
+  .about-img{ display:block; width:100%; height:auto; }
+  .home-text h1{ font-size: 2.4rem; text-align:center; }
+  .info-text{ align-items:center; text-align:center; }
+  #footer-content{ flex-direction: column; gap: 2rem; text-align:center; }
+  .footer-logo, #footer-contacts{ width: 100%; }
+}
+
+/* Formulário de contato não “anda” para a direita no mobile */
+@media screen and (max-width: 900px){
+  #contact-form{
+    max-width: 92%;
+    margin: 30px auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+}
+
+/* Reduções extras em celulares pequenos */
+@media screen and (max-width: 480px){
+  .home-text h1{ font-size: 2rem; }
+  .info-text h2{ font-size: 1.2rem; }
+  .btn, .btn-home, #button-read-more{ padding: .8rem 1.2rem; font-size: .95rem; width: auto; }
+  .projet-img{ width: 100%; height: auto; }
+  .projects1-card{ width: 100%; }
+  .contato-titulo{ font-size: 32px; }
 }
